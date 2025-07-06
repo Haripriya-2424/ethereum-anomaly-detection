@@ -25,23 +25,6 @@ The main goal of this project is to:
 
 ---
 
-## Project Structure
-ethereum-anomaly-detection/
-├── data/
-│ ├── ethereum_tx_data.csv #kaggle dataset
-│ ├── processed_tx_data.csv # Cleaned and feature-engineered data
-│ ├── tx_with_anomalies.csv # ML-detected anomalies
-│ └── tx_with_autoencoder_anomalies.csv # Deep learning anomalies
-├── notebooks/
-│ ├── 01_data_preprocessing.ipynb
-│ ├── 02_eda_visualization.ipynb
-│ ├── 03_anomaly_detection.ipynb
-│ └── 04_autoencoder_anomaly.ipynb
-├── images/
-└── README.md
-
----
-
 ## Dataset Description
 
 The original Ethereum transaction dataset used in this project is available on Kaggle:
@@ -87,13 +70,13 @@ This project uses:
 
 ## Models Used
 
-### Isolation Forest
+### * Isolation Forest
 Detects unusual data points in the dataset.
 
-### One-Class SVM
+### * One-Class SVM
 Tries to learn the boundary of normal transactions.
 
-### Autoencoder (Deep Learning)
+### * Autoencoder (Deep Learning)
 Learns to recreate normal behavior and flags anything it can't recreate well.
 
 ---
@@ -101,16 +84,16 @@ Learns to recreate normal behavior and flags anything it can't recreate well.
 ## Sample Visualizations
 
 ### * ETH Value vs Txn Fee
-![Value vs Fee](images/eth_value_vs_fee.png)
+* [Value vs Fee](images/eth_value_vs_fee.png)
 
 ### * Isolation Forest Anomalies
-![IF Anomalies](images/isolation_forest_anomalies.png)
+* [IF Anomalies](images/isolation_forest_anomalies.png)
 
 ### * Autoencoder Anomalies
-![Autoencoder](images/autoencoder_anomalies.png)
+* [Autoencoder](images/autoencoder_anomalies.png)
 
 ### * Distribution of Txn Fees
-![Fee Histogram](images/txn_fee_distribution.png)
+* [Fee Histogram](images/txn_fee_distribution.png)
 
 
 
